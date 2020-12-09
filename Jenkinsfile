@@ -2,16 +2,6 @@ def workspace
 pipeline 
 {
   agent any
-    stages 
-    {
-      stage('checkout')
-      {
-           steps 
-           {    
-              git git branch: 'master', url: 'https://github.com/egbea123/Ansible_Playbook.git'            
-              echo "Code successfully checked out!"
-          }
-     }
      stage('Ansible Deploy')
      {    
         steps 
