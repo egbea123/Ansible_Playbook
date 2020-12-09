@@ -1,0 +1,5 @@
+---
+# tasks file for webappdeploy
+#- name: copy war files from build server to Tomcat Server
+- include: configure.yml
+- include: service.yml 
