@@ -8,7 +8,7 @@ pipeline
       {
            steps 
            {    
-              git 'https://github.com/egbea123/Ansible_Playbook.git'            
+              git git branch: 'master', url: 'https://github.com/egbea123/Ansible_Playbook.git'            
               echo "Code successfully checked out!"
           }
      }
@@ -16,9 +16,7 @@ pipeline
      {    
         steps 
         { 
-           
-           //sh " ansible-playbook /var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/tomcatdeploy/site.yaml
-           sh "cd /var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/tomcatdeploy"
+           sh "cd /var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/Ansible_Playbook"
            sh  "ansible-playbook site.yaml"
            echo "Deployment is successful!"
         }
