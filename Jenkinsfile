@@ -2,7 +2,8 @@ def workspace
 pipeline 
 {
   agent any
-  stage('checkout') {
+  stages {
+    stage('checkout') {
            steps {    
                 git branch: 'master', url: 'https://github.com/egbea123/Ansible_Playbook.git'
           }
@@ -15,5 +16,6 @@ pipeline
            sh  "ansible-playbook site.yaml"
            echo "Deployment is successful!"
         }
-     }       
+     } 
+  }
 }
