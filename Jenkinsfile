@@ -10,7 +10,5 @@ pipeline
            sh  "ansible-playbook site.yaml"
            echo "Deployment is successful!"
         }
-     }
-    }    
-        
+     }       
 }
