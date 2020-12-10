@@ -12,10 +12,7 @@ pipeline
      {    
         steps 
         { 
-           //sh "cd /var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/"
-           //sh  "ansible-playbook site.yaml"
-           ansiblePlaybook become: true, becomeUser: 'devops002', credentialsId: '84259fbb-0403-473e-9ae2-2d8105d57402', installation: 'ansible_server', playbook: '/var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/', sudoUser: null
-           echo "Deployment is successful!"
+           ansiblePlaybook become: true, becomeUser: 'devops002', installation: '192.168.0.29', playbook: '/var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/'
         }
      } 
   }
