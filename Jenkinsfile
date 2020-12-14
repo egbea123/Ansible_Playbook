@@ -12,8 +12,9 @@ pipeline
      {    
         steps 
         { 
-          // ansiblePlaybook become: true, becomeUser: 'devops002', credentialsId: '84259fbb-0403-473e-9ae2-2d8105d57402', installation: '192.168.0.29', playbook: '/var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml', sudoUser: null
-          ansiblePlaybook credentialsId: 'private_key', inventory: 'dev.inv', playbook: 'site.yaml'
+          sh "sudo ansible-Playbook '/var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml"
+          //ansiblePlaybook credentialsId: 'private_key', inventory: 'dev.inv', playbook: 'site.yaml'
+          
         }
      } 
   }
