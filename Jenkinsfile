@@ -12,7 +12,7 @@ pipeline
      {    
         steps 
         { 
-          sh "sudo ansible-playbook '//var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml"
+          sh "sudo ansible-playbook '//var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml'"
           //ansiblePlaybook credentialsId: 'private_key', inventory: 'dev.inv', playbook: 'site.yaml'
           
         }
