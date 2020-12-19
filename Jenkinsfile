@@ -12,9 +12,9 @@ pipeline
      {    
         steps 
         { 
-          sh "ansible-playbook '//var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml'"
+         // sh "ansible-playbook '//var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml'"
           //ansiblePlaybook credentialsId: 'private_key', inventory: 'dev.inv', playbook: 'site.yaml'
-          
+          ansiblePlaybook credentialsId: '18e7ceb4-dc87-49aa-9dc3-a071ce6be8c1', installation: 'ansible_server', playbook: ''
         }
      } 
   }
