@@ -1,6 +1,7 @@
 ---
 - name: deploy site to tomcat server
-  hosts: ubuntu@192.168.0.27
+  hosts: webserver
+  # ubuntu@192.168.0.27
   become: yes
    #sudo:true
   roles: 
