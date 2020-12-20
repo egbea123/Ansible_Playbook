@@ -12,8 +12,7 @@ pipeline
      {    
         steps 
         {     
-           //ansiblePlaybook installation: 'Ansible', inventory: 'webserver', playbook: 'site.yaml'
-           ansiblePlaybook installation: 'Ansible', inventory: 'webserver', playbook: '/workspace/Ansible-Tomcat_Deployment/package_deployment'
+           ansiblePlaybook installation: 'Ansible', inventory: 'webserver', playbook: '/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml'
         }
      } 
   }
