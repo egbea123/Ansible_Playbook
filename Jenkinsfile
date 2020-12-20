@@ -11,11 +11,9 @@ pipeline
      stage('Ansible Deploy')
      {    
         steps 
-        { 
-        
-          // ansiblePlaybook becomeUser: null, installation: 'ansible_server', playbook: 'site.yaml', sudoUser: null
-            sh "ansible-playbook '/var/lib/jenkins/workspace/Ansible-Tomcat_Deployment/package_deployment/site.yaml'"
-           //ansiblePlaybook credentialsId: '18e7ceb4-dc87-49aa-9dc3-a071ce6be8c1', installation: 'ansible_server', playbook: 'site.yaml'
+        {     
+           ansiblePlaybook installation: 'Ansible', inventory: 'webserver', playbook: 'site.yaml'
+         
         }
      } 
   }
